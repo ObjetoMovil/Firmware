@@ -11,8 +11,8 @@
 
 #define PIN_SENSOR_LEFT 32
 #define PIN_SENSOR_RIGHT 33
-#define PIN_SENSOR_UP 50
-#define PIN_SENSOR_DOWN 51
+#define PIN_SENSOR_UP 42
+#define PIN_SENSOR_DOWN 43
 
 #define MOVE_UP 1
 #define MOVE_DOWN 2

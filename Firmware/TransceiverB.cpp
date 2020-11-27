@@ -82,3 +82,10 @@
     char data[] = "Movimiento no soportado";
     transceiver.write(&data, sizeof(data));
   }
+
+  void sendAlreadyExecutingMovement(){
+    delay(10);
+    setEmmiter();
+    char data[] = "";
+    transceiver.write(&data, sizeof(data));
+  }

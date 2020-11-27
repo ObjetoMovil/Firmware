@@ -34,12 +34,16 @@
    * del parametro type recibido.
    */
   void setMovement(char type, char motor, int speed, int mTime, int angle, int radio, char orientation1, char orientation2){
-    switch(type){
-      case 'B': basicMovement(motor, mTime, speed, orientation1); break;
-      case 'C': curvedMovement(radio, speed, orientation1, orientation2); break;
-      case 'D': diagonalMovement(mTime, speed, angle); break;
-      case 'S': straightMovement(mTime, speed, orientation1); break;
+    if(isMoving){
+      stopMotors();
+      isMoving = false;
     }
+    switch(type){
+        case 'B': basicMovement(motor, mTime, speed, orientation1); break;
+        case 'C': curvedMovement(radio, speed, orientation1, orientation2); break;
+        case 'D': diagonalMovement(mTime, speed, angle); break;
+        case 'S': straightMovement(mTime, speed, orientation1); break;
+     } 
   }  
  
   /**
